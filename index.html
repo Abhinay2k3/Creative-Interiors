@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Creative Interiors is a premium interior design firm specializing in luxurious, high-end residential and commercial spaces. Discover our design philosophy and request a consultation today.">
+  <meta name="keywords"
+    content="interior design, luxury home decor, Japandi style, home renovation, interior architect, design firm, Creative Interiors">
+  <meta name="author" content="Creative Interiors">
+  <title>Creative Interiors | Luxury Interior Design Firm</title>
+
+  <!-- Font Stylesheet Link -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Ionicons CDN for beautiful premium icons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <!-- SmtpJS for SMTP email dispatch -->
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Header Section -->
+  <header id="main-header">
+    <div class="container">
+      <a href="#" class="logo" id="logo-home">
+        Creative<span>Interiors</span>
+      </a>
+
+      <!-- Hamburger Menu for Mobile -->
+      <button class="hamburger" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Main Navigation Menu -->
+      <nav id="nav-navigation" aria-label="Main navigation">
+        <ul class="nav-menu" id="nav-list">
+          <li><a href="#" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#booking" class="nav-link">Consultation</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero-section">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title" id="main-headline">
+          Crafting Spaces That Tell <span>Your Story</span>
+        </h1>
+        <p class="hero-desc" id="sub-headline">
+          Bespoke interior architectural solutions tailored to blend luxury, comfort, and timeless modern style.
+        </p>
+        <div class="hero-btns">
+          <a href="#portfolio" class="btn btn-primary" id="hero-cta-portfolio">Explore Projects</a>
+          <a href="#booking" class="btn btn-outline" id="hero-cta-consult">Book Consultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Philosophy Section -->
+  <section id="about" class="reveal">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <span class="section-tag" id="about-tag">Our Firm</span>
+          <h2 class="section-title" id="about-title">Design with <span>Intention & Craft</span></h2>
+          <p style="margin-bottom: 1.5rem; color: var(--color-text-secondary);">
+            At Creative Interiors, we believe that design should transcend aesthetics. A space is a sanctuary, a
+            reflection of individual identity, and a functional work of art.
+          </p>
+          <p style="margin-bottom: 2rem; color: var(--color-text-secondary);">
+            Founded by CEO & Principal Designer <strong>Balivada Ravi Kumar</strong>, our Visakhapatnam-based firm
+            brings together highly curated materials, meticulous layout planning, and organic modern textures to
+            establish environments that feel both inspiring and deeply comforting.
+          </p>
+
+          <div class="about-stats" id="firm-statistics">
+            <div>
+              <span class="stat-number">12+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div>
+              <span class="stat-number">140+</span>
+              <span class="stat-label">Spaces Completed</span>
+            </div>
+            <div>
+              <span class="stat-number">98%</span>
+              <span class="stat-label">Client Trust</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-visual">
+          <div class="about-img-wrapper primary reveal reveal-delay-1">
+            <img src="assets/portfolio_living.png" alt="A styled luxury living corner with plaster wall and armchair">
+          </div>
+          <div class="about-img-wrapper secondary reveal reveal-delay-2">
+            <img src="assets/portfolio_bedroom.png" alt="Minimalist serene bedroom by Creative Interiors">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="reveal">
+    <div class="container">
+      <div class="portfolio-header">
+        <div>
+          <span class="section-tag">Showcase</span>
+          <h2 class="section-title">Selected <span>Works</span></h2>
+        </div>
+        <ul class="portfolio-filters" id="portfolio-filters-list">
+          <li><button class="filter-btn active" data-filter="all" id="filter-all">All Projects</button></li>
+          <li><button class="filter-btn" data-filter="living" id="filter-living">Living Rooms</button></li>
+          <li><button class="filter-btn" data-filter="kitchen" id="filter-kitchen">Kitchens</button></li>
+          <li><button class="filter-btn" data-filter="bedroom" id="filter-bedroom">Bedrooms</button></li>
+          <li><button class="filter-btn" data-filter="office" id="filter-office">Commercial</button></li>
+        </ul>
+      </div>
+
+      <div class="portfolio-grid" id="projects-grid">
+        <!-- Living Room Item -->
+        <div class="portfolio-item reveal" data-category="living" id="proj-living-room">
+          <img class="portfolio-img" src="assets/portfolio_living.png" alt="Organic Modern Living Room Corner">
+          <div class="portfolio-overlay">
+            <span class="portfolio-item-cat">Living Room</span>
+            <h3 class="portfolio-item-title">Earthy Textures</h3>
+            <div class="portfolio-item-plus"><ion-icon name="add-outline"></ion-icon></div>
+          </div>
+        </div>
+
+        <!-- Kitchen Item -->
+        <div class="portfolio-item reveal reveal-delay-1" data-category="kitchen" id="proj-kitchen">
+          <img class="portfolio-img" src="assets/portfolio_kitchen.png" alt="Modern Japandi Kitchen in dark oak">
+          <div class="portfolio-overlay">
+            <span class="portfolio-item-cat">Kitchen</span>
+            <h3 class="portfolio-item-title">Japandi Elegance</h3>
+            <div class="portfolio-item-plus"><ion-icon name="add-outline"></ion-icon></div>
+          </div>
+        </div>
+
+        <!-- Bedroom Item -->
+        <div class="portfolio-item reveal reveal-delay-2" data-category="bedroom" id="proj-bedroom">
+          <img class="portfolio-img" src="assets/portfolio_bedroom.png" alt="Serene linen modern bedroom">
+          <div class="portfolio-overlay">
+            <span class="portfolio-item-cat">Bedroom</span>
+            <h3 class="portfolio-item-title">Serene Sanctuary</h3>
+            <div class="portfolio-item-plus"><ion-icon name="add-outline"></ion-icon></div>
+          </div>
+        </div>
+
+        <!-- Office/Commercial Item -->
+        <div class="portfolio-item reveal reveal-delay-3" data-category="office" id="proj-office">
+          <img class="portfolio-img" src="assets/portfolio_office.png" alt="Luxury Hotel Lobby / Office Lounge">
+          <div class="portfolio-overlay">
+            <span class="portfolio-item-cat">Commercial</span>
+            <h3 class="portfolio-item-title">Aura Executive Lounge</h3>
+            <div class="portfolio-item-plus"><ion-icon name="add-outline"></ion-icon></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Before/After Slider Section -->
+  <section id="transformation" class="before-after reveal">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <span class="section-tag">The Process</span>
+        <h2 class="section-title">Visualizing the <span>Metamorphosis</span></h2>
+        <p style="max-width: 600px; margin: 0 auto; color: var(--color-text-secondary);">
+          Experience how we completely redesign awkward, outdated layouts into open, light-flooded modern architectures.
+          Drag the slider to witness the difference.
+        </p>
+      </div>
+
+      <!-- Drag Slider Wrapper -->
+      <div class="slider-wrapper" id="before-after-slider">
+        <!-- After Image (Background) -->
+        <div class="slider-img slider-img-after">
+          <img src="assets/after_slider.png"
+            alt="Renovated luxury living room with white plaster walls and modern lighting">
+        </div>
+        <!-- Before Image (Clipped Overlay) -->
+        <div class="slider-img slider-img-before" id="before-img-container">
+          <img src="assets/before_slider.png" alt="Outdated cluttered messy living room from 1990s">
+        </div>
+        <!-- Slider Label Overlays -->
+        <div class="slider-label slider-label-before">Before</div>
+        <div class="slider-label slider-label-after">After</div>
+        <!-- Drag Handle -->
+        <div class="slider-handle" id="slider-drag-handle">
+          <div class="slider-handle-button">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="reveal">
+    <div class="container">
+      <span class="section-tag">Services</span>
+      <h2 class="section-title">Design Packages <span>& Offerings</span></h2>
+
+      <div class="services-grid" id="services-cards-grid">
+        <!-- Service 1 -->
+        <div class="service-card reveal">
+          <div class="service-icon"><ion-icon name="home-outline"></ion-icon></div>
+          <h3 class="service-title">Residential Design</h3>
+          <p class="service-desc">Complete, high-end spatial transformation for apartments, villas, and townhouses from
+            concept to build execution.</p>
+          <a href="#booking" class="service-link" id="service-link-res">Inquire <span aria-hidden="true">→</span></a>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-icon"><ion-icon name="business-outline"></ion-icon></div>
+          <h3 class="service-title">Commercial Spaces</h3>
+          <p class="service-desc">Bespoke spatial design for executive offices, high-end retail, hotel lobbies, and
+            hospitality spaces.</p>
+          <a href="#booking" class="service-link" id="service-link-comm">Inquire <span aria-hidden="true">→</span></a>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-icon"><ion-icon name="color-palette-outline"></ion-icon></div>
+          <h3 class="service-title">Styling & Materials</h3>
+          <p class="service-desc">Curating furniture, customized upholstery, art collection, material finishes, color
+            styling and light fixtures.</p>
+          <a href="#booking" class="service-link" id="service-link-style">Inquire <span aria-hidden="true">→</span></a>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card reveal reveal-delay-3">
+          <div class="service-icon"><ion-icon name="construct-outline"></ion-icon></div>
+          <h3 class="service-title">Project Management</h3>
+          <p class="service-desc">On-site coordination, contractor alignment, quality control, procurement tracking and
+            final turn-key delivery.</p>
+          <a href="#booking" class="service-link" id="service-link-pm">Inquire <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials reveal">
+    <div class="container">
+      <div style="text-align: center;">
+        <span class="section-tag" style="color: var(--color-accent-gold);">Client Stories</span>
+        <h2 class="section-title" style="color: var(--color-surface-white);">What They <span>Say</span></h2>
+      </div>
+
+      <div class="testimonials-slider">
+        <div class="testimonial-track" id="testimonial-slider-track">
+          <!-- Slide 1 -->
+          <div class="testimonial-slide active" id="slide-0">
+            <blockquote class="testimonial-quote">
+              "Creative Interiors transformed our outdated villa in Rushikonda into a warm, sunlit modern sanctuary.
+              They completely understood our vision, and the execution is flawless."
+            </blockquote>
+            <div class="testimonial-author">Ananya & Rohan Sharma</div>
+            <div class="testimonial-role">Homeowners, Rushikonda Villa</div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="testimonial-slide" id="slide-1">
+            <blockquote class="testimonial-quote">
+              "The design of our corporate office on VIP Road is a huge success. The team created an inspiring
+              commercial workspace that our clients and partners rave about daily."
+            </blockquote>
+            <div class="testimonial-author">Kabir Malhotra</div>
+            <div class="testimonial-role">CEO, Malhotra & Partners</div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="testimonial-slide" id="slide-2">
+            <blockquote class="testimonial-quote">
+              "Their choice of organic, local materials and balanced layouts was absolutely flawless. The craftsmanship
+              is of international standards."
+            </blockquote>
+            <div class="testimonial-author">Priya Nair</div>
+            <div class="testimonial-role">Principal Architect, Atelier 91</div>
+          </div>
+        </div>
+
+        <!-- Sliding Dots -->
+        <div class="testimonials-nav" id="testimonial-dots-container">
+          <button class="testimonial-dot active" data-index="0" aria-label="View slide 1"></button>
+          <button class="testimonial-dot" data-index="1" aria-label="View slide 2"></button>
+          <button class="testimonial-dot" data-index="2" aria-label="View slide 3"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Consultation Booking Section -->
+  <section id="booking" class="reveal">
+    <div class="container">
+      <div class="booking-grid">
+        <div>
+          <span class="section-tag">Get Started</span>
+          <h2 class="section-title">Schedule A <span>Consultation</span></h2>
+          <p class="booking-info-text">
+            Let's discuss your space. Fill out our detailed brief questionnaire to schedule a virtual or on-site
+            consultation with our lead designers.
+          </p>
+
+          <div class="contact-card">
+            <div class="contact-item">
+              <div class="contact-icon"><ion-icon name="location-outline"></ion-icon></div>
+              <div>
+                <div class="contact-label">Our Office</div>
+                <div class="contact-val" id="contact-address-val">VIP Road, Siripuram, Visakhapatnam, Andhra Pradesh,
+                  India</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><ion-icon name="call-outline"></ion-icon></div>
+              <div>
+                <div class="contact-label">Call Us</div>
+                <div class="contact-val" id="contact-phone-val">+91 9866869316</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><ion-icon name="mail-outline"></ion-icon></div>
+              <div>
+                <div class="contact-label">Email Address</div>
+                <div class="contact-val" id="contact-email-val">ravi.kumarultrafresh@gmail.com</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <!-- Booking Form -->
+          <form id="consultation-form" class="booking-form" action="#" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" id="client-name" class="form-input" placeholder=" " required>
+                <label for="client-name" class="form-label">Your Name</label>
+              </div>
+              <div class="form-group">
+                <input type="email" id="client-email" class="form-input" placeholder=" " required>
+                <label for="client-email" class="form-label">Email Address</label>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <input type="tel" id="client-phone" class="form-input" placeholder=" ">
+                <label for="client-phone" class="form-label">Phone Number</label>
+              </div>
+              <div class="form-group">
+                <input type="text" id="client-location" class="form-input" placeholder=" ">
+                <label for="client-location" class="form-label">Project Location (City)</label>
+              </div>
+            </div>
+
+            <!-- Style Preference Selection -->
+            <span class="form-selection-title">Preferred Design Aesthetic</span>
+            <div class="form-options-grid">
+              <div class="option-box">
+                <input type="radio" id="style-minimalist" name="aesthetic-style" value="Minimalist" checked>
+                <label for="style-minimalist">Modern Minimalist</label>
+              </div>
+              <div class="option-box">
+                <input type="radio" id="style-japandi" name="aesthetic-style" value="Japandi">
+                <label for="style-japandi">Japandi</label>
+              </div>
+              <div class="option-box">
+                <input type="radio" id="style-classic" name="aesthetic-style" value="Classic Luxury">
+                <label for="style-classic">Classic Luxury</label>
+              </div>
+            </div>
+
+            <!-- Budget Preference Selection -->
+            <span class="form-selection-title">Estimated Budget Range</span>
+            <div class="form-options-grid">
+              <div class="option-box">
+                <input type="radio" id="budget-level1" name="budget-range" value="₹15 Lakhs - ₹30 Lakhs" checked>
+                <label for="budget-level1">₹15 Lakhs - ₹30 Lakhs</label>
+              </div>
+              <div class="option-box">
+                <input type="radio" id="budget-level2" name="budget-range" value="₹30 Lakhs - ₹75 Lakhs">
+                <label for="budget-level2">₹30 Lakhs - ₹75 Lakhs</label>
+              </div>
+              <div class="option-box">
+                <input type="radio" id="budget-level3" name="budget-range" value="₹75 Lakhs+">
+                <label for="budget-level3">₹75 Lakhs+</label>
+              </div>
+            </div>
+
+            <div class="form-group full-width">
+              <input type="text" id="client-message" class="form-input" placeholder=" ">
+              <label for="client-message" class="form-label">Brief project description (e.g. 3-bedroom villa, kitchen
+                remodeling)</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="form-submit-btn" style="width: 100%;">Submit
+              Inquiry</button>
+          </form>
+
+          <!-- Form Success Card (JS Toggled) -->
+          <div class="form-success-container" id="form-success-card">
+            <div class="success-icon"><ion-icon name="checkmark-circle-outline"></ion-icon></div>
+            <h3 class="serif-text" style="font-size: 2.25rem; margin-bottom: 1rem;">Inquiry Received</h3>
+            <p style="color: var(--color-text-secondary); max-width: 450px; margin-bottom: 2rem;">
+              Thank you for sharing your brief. Our design coordinator will review your aesthetic preferences and
+              contact you within 24 business hours to schedule your video consultation.
+            </p>
+            <button class="btn btn-outline" id="success-reset-btn">Send Another Inquiry</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3 class="logo footer-logo">Creative<span>Interiors</span></h3>
+          <p class="footer-desc" id="footer-firm-desc">
+            Founded by Balivada Ravi Kumar, our award-winning Visakhapatnam firm creates balanced, beautiful, and highly
+            personalized spaces.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Home</a></li>
+            <li><a href="#about" class="footer-link">About Us</a></li>
+            <li><a href="#portfolio" class="footer-link">Our Projects</a></li>
+            <li><a href="#booking" class="footer-link">Book Consult</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Office Hours</h4>
+          <ul class="footer-links" style="pointer-events: none; color: rgba(255, 255, 255, 0.5); font-size: 0.9rem;">
+            <li>Monday - Friday: 9am - 6pm</li>
+            <li>Saturday: 10am - 4pm</li>
+            <li>Sunday: Closed</li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4 class="footer-title">Newsletter</h4>
+          <p>Subscribe to receive architectural updates, material trends, and exclusive project sneak-peeks.</p>
+          <form class="newsletter-form" id="newsletter-form-action" action="#" method="POST">
+            <input type="email" class="newsletter-input" placeholder="Your Email Address" required
+              aria-label="Email address for newsletter">
+            <button type="submit" class="newsletter-btn" aria-label="Subscribe"><ion-icon
+                name="arrow-forward-outline"></ion-icon></button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Creative Interiors. All Rights Reserved. | <a href="#" id="admin-portal-trigger"
+            style="color: rgba(255,255,255,0.4); text-decoration: none; font-size: 0.85rem; margin-left: 0.5rem;"><ion-icon
+              name="lock-closed-outline" style="vertical-align: middle; margin-right: 2px;"></ion-icon>Admin Portal</a>
+        </p>
+        <div class="footer-socials">
+          <a href="#" class="social-link" aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a>
+          <a href="#" class="social-link" aria-label="Pinterest"><ion-icon name="logo-pinterest"></ion-icon></a>
+          <a href="#" class="social-link" aria-label="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a>
+          <a href="#" class="social-link" aria-label="Facebook"><ion-icon name="logo-facebook"></ion-icon></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal Container -->
+  <div class="lightbox" id="portfolio-lightbox" aria-hidden="true" role="dialog">
+    <button class="lightbox-close" id="lightbox-close-btn" aria-label="Close image showcase">&times;</button>
+    <div class="lightbox-content">
+      <img src="" alt="" class="lightbox-img" id="lightbox-expanded-img">
+      <div class="lightbox-caption" id="lightbox-image-caption"></div>
+    </div>
+  </div>
+
+  <!-- Admin Login Modal -->
+  <div class="admin-modal" id="admin-login-modal" aria-hidden="true" role="dialog">
+    <div class="admin-modal-content login-box">
+      <button class="admin-modal-close" id="admin-login-close">&times;</button>
+      <h3 class="serif-text">Admin Login</h3>
+      <p class="admin-help-text">Default Credentials: <code>admin</code> / <code>admin</code></p>
+      <form id="admin-login-form">
+        <div class="admin-form-group">
+          <input type="text" id="admin-username" placeholder="Username" required>
+        </div>
+        <div class="admin-form-group">
+          <input type="password" id="admin-password" placeholder="Password" required>
+        </div>
+        <div id="admin-login-error" class="admin-error-msg" style="display: none;">Invalid credentials</div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Admin Dashboard Modal -->
+  <div class="admin-modal" id="admin-dashboard-modal" aria-hidden="true" role="dialog">
+    <div class="admin-modal-content dashboard-box">
+      <button class="admin-modal-close" id="admin-dashboard-close">&times;</button>
+      <h3 class="serif-text" style="font-size: 2.25rem; margin-bottom: 1.5rem; color: var(--color-text-primary);">Admin
+        Control Panel</h3>
+
+      <!-- Tab Headers -->
+      <div class="admin-tabs">
+        <button type="button" class="admin-tab-btn active" data-tab="tab-contact">Contact & Locations</button>
+        <button type="button" class="admin-tab-btn" data-tab="tab-testimonials">Success Stories</button>
+        <button type="button" class="admin-tab-btn" data-tab="tab-images">Images & Projects</button>
+      </div>
+
+      <!-- Tab Contents -->
+      <form id="admin-dashboard-form">
+        <!-- Tab 1: Contact Info -->
+        <div class="admin-tab-content active" id="tab-contact">
+          <div class="admin-form-group">
+            <label for="edit-address">Office Address</label>
+            <input type="text" id="edit-address" class="admin-input" required>
+          </div>
+          <div class="admin-form-group">
+            <label for="edit-phone">Contact Phone</label>
+            <input type="text" id="edit-phone" class="admin-input" required>
+          </div>
+          <div class="admin-form-group">
+            <label for="edit-email">Studio Email</label>
+            <input type="email" id="edit-email" class="admin-input" required>
+          </div>
+        </div>
+
+        <!-- Tab 2: Testimonials -->
+        <div class="admin-tab-content" id="tab-testimonials">
+          <!-- Slide 1 -->
+          <div class="admin-card">
+            <h4>Story 1 (Rushikonda Villa)</h4>
+            <div class="admin-form-group">
+              <label for="edit-t1-quote">Quote</label>
+              <textarea id="edit-t1-quote" class="admin-input" rows="2" required></textarea>
+            </div>
+            <div class="admin-form-group-row">
+              <div class="admin-form-group">
+                <label for="edit-t1-author">Author(s)</label>
+                <input type="text" id="edit-t1-author" class="admin-input" required>
+              </div>
+              <div class="admin-form-group">
+                <label for="edit-t1-role">Role/Location</label>
+                <input type="text" id="edit-t1-role" class="admin-input" required>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="admin-card" style="margin-top: 1rem;">
+            <h4>Story 2 (VIP Road Office)</h4>
+            <div class="admin-form-group">
+              <label for="edit-t2-quote">Quote</label>
+              <textarea id="edit-t2-quote" class="admin-input" rows="2" required></textarea>
+            </div>
+            <div class="admin-form-group-row">
+              <div class="admin-form-group">
+                <label for="edit-t2-author">Author</label>
+                <input type="text" id="edit-t2-author" class="admin-input" required>
+              </div>
+              <div class="admin-form-group">
+                <label for="edit-t2-role">Role/Location</label>
+                <input type="text" id="edit-t2-role" class="admin-input" required>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="admin-card" style="margin-top: 1rem;">
+            <h4>Story 3 (Atelier 91 Architect)</h4>
+            <div class="admin-form-group">
+              <label for="edit-t3-quote">Quote</label>
+              <textarea id="edit-t3-quote" class="admin-input" rows="2" required></textarea>
+            </div>
+            <div class="admin-form-group-row">
+              <div class="admin-form-group">
+                <label for="edit-t3-author">Author</label>
+                <input type="text" id="edit-t3-author" class="admin-input" required>
+              </div>
+              <div class="admin-form-group">
+                <label for="edit-t3-role">Role/Location</label>
+                <input type="text" id="edit-t3-role" class="admin-input" required>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Images & Projects -->
+        <div class="admin-tab-content" id="tab-images">
+          <div class="admin-card">
+            <h4>Before / After Slider Images</h4>
+            <div class="admin-form-group-row">
+              <div class="admin-form-group">
+                <label for="edit-slider-before">Before Image Path</label>
+                <input type="text" id="edit-slider-before" class="admin-input" required>
+              </div>
+              <div class="admin-form-group">
+                <label for="edit-slider-after">After Image Path</label>
+                <input type="text" id="edit-slider-after" class="admin-input" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="admin-card" style="margin-top: 1rem;">
+            <h4>Portfolio Projects</h4>
+            <!-- Project 1 -->
+            <div class="admin-project-item">
+              <h5>Project 1 (Living Room)</h5>
+              <div class="admin-form-group-row">
+                <div class="admin-form-group">
+                  <label for="edit-p1-title">Title</label>
+                  <input type="text" id="edit-p1-title" class="admin-input" required>
+                </div>
+                <div class="admin-form-group">
+                  <label for="edit-p1-img">Image Path</label>
+                  <input type="text" id="edit-p1-img" class="admin-input" required>
+                </div>
+              </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="admin-project-item" style="margin-top: 0.75rem;">
+              <h5>Project 2 (Kitchen)</h5>
+              <div class="admin-form-group-row">
+                <div class="admin-form-group">
+                  <label for="edit-p2-title">Title</label>
+                  <input type="text" id="edit-p2-title" class="admin-input" required>
+                </div>
+                <div class="admin-form-group">
+                  <label for="edit-p2-img">Image Path</label>
+                  <input type="text" id="edit-p2-img" class="admin-input" required>
+                </div>
+              </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="admin-project-item" style="margin-top: 0.75rem;">
+              <h5>Project 3 (Bedroom)</h5>
+              <div class="admin-form-group-row">
+                <div class="admin-form-group">
+                  <label for="edit-p3-title">Title</label>
+                  <input type="text" id="edit-p3-title" class="admin-input" required>
+                </div>
+                <div class="admin-form-group">
+                  <label for="edit-p3-img">Image Path</label>
+                  <input type="text" id="edit-p3-img" class="admin-input" required>
+                </div>
+              </div>
+            </div>
+            <!-- Project 4 -->
+            <div class="admin-project-item" style="margin-top: 0.75rem;">
+              <h5>Project 4 (Commercial)</h5>
+              <div class="admin-form-group-row">
+                <div class="admin-form-group">
+                  <label for="edit-p4-title">Title</label>
+                  <input type="text" id="edit-p4-title" class="admin-input" required>
+                </div>
+                <div class="admin-form-group">
+                  <label for="edit-p4-img">Image Path</label>
+                  <input type="text" id="edit-p4-img" class="admin-input" required>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Actions -->
+        <div class="admin-actions">
+          <button type="button" class="btn btn-outline" id="admin-reset-btn">Reset Defaults</button>
+          <button type="button" class="btn btn-outline" id="admin-export-btn">Export Config</button>
+          <button type="submit" class="btn btn-primary" id="admin-save-btn">Apply Changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- JavaScript Execution Script -->
+  <script src="script.js"></script>
+</body>
+
+</html>
