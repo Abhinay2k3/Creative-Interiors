@@ -1,0 +1,91 @@
+{
+  "forgot_password_question": "What is the name of the founder and CEO of Creative Interiors?",
+  "forgot_password_answer": "Balivada Ravi Kumar",
+  "password": "Srilavanya@23",
+  "contact": {
+    "address": "VIP Road, Siripuram, Visakhapatnam, Andhra Pradesh, India",
+    "phone": "+91 9866869316",
+    "email": "ravi.kumarultrafresh@gmail.com",
+    "instagram": "https://instagram.com/creative_interiors",
+    "pinterest": "https://pinterest.com/creative_interiors",
+    "linkedin": "https://linkedin.com/company/creative_interiors",
+    "facebook": "https://facebook.com/creative_interiors"
+  },
+  "descriptions": {
+    "hero_title": "Crafting Spaces That Tell <span>Your Story</span>",
+    "hero_desc": "Bespoke interior architectural solutions tailored to blend luxury, comfort, and timeless modern style.",
+    "about_tag": "Our Firm",
+    "about_title": "Design with <span>Intention & Craft</span>",
+    "about_desc_1": "At Creative Interiors, we believe that design should transcend aesthetics. A space is a sanctuary, a reflection of individual identity, and a functional work of art.",
+    "about_desc_2": "Founded by CEO & Principal Designer Balivada Ravi Kumar, our Visakhapatnam-based firm brings together highly curated materials, meticulous layout planning, and organic modern textures to establish environments that feel both inspiring and deeply comforting.",
+    "footer_desc": "Founded by Balivada Ravi Kumar, our award-winning Visakhapatnam firm creates balanced, beautiful, and highly personalized spaces.",
+    "booking_title": "Schedule A <span>Consultation</span>",
+    "booking_desc": "Let's discuss your space. Fill out our detailed brief questionnaire to schedule a virtual or on-site consultation with our lead designers."
+  },
+  "testimonials": [
+    {
+      "quote": "Creative Interiors transformed our outdated villa in Rushikonda into a warm, sunlit modern sanctuary. They completely understood our vision, and the execution is flawless.",
+      "author": "Ananya & Rohan Sharma",
+      "role": "Homeowners, Rushikonda Villa"
+    },
+    {
+      "quote": "The design of our corporate office on VIP Road is a huge success. The team created an inspiring commercial workspace that our clients and partners rave about daily.",
+      "author": "Kabir Malhotra",
+      "role": "CEO, Malhotra & Partners"
+    },
+    {
+      "quote": "Their choice of organic, local materials and balanced layouts was absolutely flawless. The craftsmanship is of international standards.",
+      "author": "Priya Nair",
+      "role": "Principal Architect, Atelier 91"
+    }
+  ],
+  "slider": {
+    "before": "assets/before_slider.png",
+    "after": "assets/after_slider.png"
+  },
+  "projects": [
+    {
+      "id": "proj-living-room",
+      "category": "living",
+      "title": "Earthy Textures",
+      "image": "assets/portfolio_living.png",
+      "type": "image",
+      "gallery": [
+        { "src": "assets/portfolio_living.png", "type": "image" },
+        { "src": "https://assets.mixkit.co/videos/preview/mixkit-interior-of-a-modern-living-room-4819-large.mp4", "type": "video" }
+      ]
+    },
+    {
+      "id": "proj-kitchen",
+      "category": "kitchen",
+      "title": "Japandi Elegance",
+      "image": "assets/portfolio_kitchen.png",
+      "type": "image",
+      "gallery": [
+        { "src": "assets/portfolio_kitchen.png", "type": "image" }
+      ]
+    },
+    {
+      "id": "proj-bedroom",
+      "category": "bedroom",
+      "title": "Serene Sanctuary",
+      "image": "assets/portfolio_bedroom.png",
+      "type": "image",
+      "gallery": [
+        { "src": "assets/portfolio_bedroom.png", "type": "image" },
+        { "src": "https://assets.mixkit.co/videos/preview/mixkit-modern-bedroom-interior-with-comfy-bed-and-plants-41976-large.mp4", "type": "video" }
+      ]
+    },
+    {
+      "id": "proj-office",
+      "category": "office",
+      "title": "Aura Executive Lounge",
+      "image": "assets/portfolio_office.png",
+      "type": "image",
+      "gallery": [
+        { "src": "assets/portfolio_office.png", "type": "image" },
+        { "src": "https://assets.mixkit.co/videos/preview/mixkit-luxury-penthouse-or-office-lobby-interior-32868-large.mp4", "type": "video" }
+      ]
+    }
+  ]
+}
